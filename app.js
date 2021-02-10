@@ -13,9 +13,11 @@ async function fetchData(){
     return response
 }
 
-function displayData(reponse){
-    console.log(reponse)
-    reponse.map(({strMeal , strCategory ,strMealThumb ,strInstruction ,strYoutube}) => {
+function displayData(response){
+   htmlContainer.innerHTML = ''
+    response.map(({strMeal , strCategory ,strMealThumb ,strInstructions ,strYoutube ,strArea}) => {
+        const ytbUrl = strYoutube.split('?v=')[1]
+        console.log(strYoutube, "\n" , ytbUrl );
             htmlContainer.innerHTML += `
             <div class="card">
             <div class="title">
@@ -27,12 +29,12 @@ function displayData(reponse){
             </div>
             <div class="
             info">
-                <p>Instruction : ${strInstruction}</p>
+                <p>Instruction : ${strInstructions}</p>
                 <br>
-                <p>Region : ={strArea}</p>
+                <p style="text-align: center; font-size : 2rem;">Region : ${strArea}</p>
             </div>
             <div>
-                <iframe src="${strYoutube}" frameborder="0"></iframe>
+                <iframe width="900" height="544" src="https://www.youtube.com/embed/${ytbUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     `
@@ -42,6 +44,7 @@ function displayData(reponse){
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
     fetchData().then(reponse => {
-        displayData(reponse.meals)
+       displayData(reponse.meals)
+
     })
 })
