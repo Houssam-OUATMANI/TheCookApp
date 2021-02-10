@@ -43,6 +43,7 @@ function displayData(response){
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
+    e.stopPropagation()
     fetchData().then(reponse => {
        displayData(reponse.meals)
 
