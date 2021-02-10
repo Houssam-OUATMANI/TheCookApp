@@ -13,7 +13,7 @@ h1{
 }
 input{
     display: block;
-    width: 35%;
+    width: 50%;
     margin: auto;
     outline: none;
     border: none;
@@ -27,7 +27,7 @@ button{
     display: block;
     margin: auto;
     margin-top: 1rem;
-    width: 10%;
+    width: 20%;
     cursor: pointer;
 }
 .recipe__container{
@@ -63,6 +63,15 @@ img {
     font-size: 1.5rem;
 }
 
-.info:last-child{
-    text-align: center;
+@media screen and (max-width: 350px) {
+    input {
+        width: 90%;
+    }
+   .submit {
+       width: 50%;
+   }
+
+   .title{
+       font-size: 1.5rem;
+   } 
 }
