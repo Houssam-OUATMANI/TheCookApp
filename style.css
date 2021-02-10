@@ -2,8 +2,35 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(190, 190, 190);
 }
 
+h1{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+}
+input{
+    display: block;
+    width: 35%;
+    margin: auto;
+    outline: none;
+    border: none;
+    padding: .5rem .5rem;
+    border-radius: 5px;
+
+}
+
+::placeholder{
+}
+button{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    width: 10%;
+    cursor: pointer;
+}
 .recipe__container{
     background-color: rgb(238, 232, 232);
     display: flex;
