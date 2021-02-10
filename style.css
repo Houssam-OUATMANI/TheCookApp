@@ -63,7 +63,7 @@ img {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 1000px) {
     input {
         width: 90%;
     }
@@ -74,4 +74,23 @@ img {
    .title{
        font-size: 1.5rem;
    } 
+
+   .card {
+       width: 19rem;
+   }
+   .img__container {
+       width: inherit
+   }
+   img {
+       width: inherit;
+   }
+
+   .info {
+       font-size: 1.1rem;
+   }
+
+   iframe{
+       width: 19rem;
+       height: 12rem;
+   }
 }
