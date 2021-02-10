@@ -17,7 +17,7 @@ function displayData(response){
    htmlContainer.innerHTML = ''
     response.map(({strMeal , strCategory ,strMealThumb ,strInstructions ,strYoutube ,strArea}) => {
         const ytbUrl = strYoutube.split('?v=')[1]
-        console.log(strYoutube, "\n" , ytbUrl );
+  
             htmlContainer.innerHTML += `
             <div class="card">
             <div class="title">
